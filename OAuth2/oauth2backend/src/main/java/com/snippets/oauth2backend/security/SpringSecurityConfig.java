@@ -28,7 +28,7 @@ import java.util.Arrays;
 
 public class SpringSecurityConfig {
 
-    @Value("${client.url}")
+    @Value("https://localhost:8080" )
     private String clientURL; // клиентский URL
 
     // создается спец. бин, который отвечает за настройки запросов по http (метод вызывается автоматически) Spring контейнером
@@ -64,6 +64,4 @@ public class SpringSecurityConfig {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-
-
 }
